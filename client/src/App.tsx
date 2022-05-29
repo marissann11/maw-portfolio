@@ -1,8 +1,24 @@
 import React from "react";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AboutPage from "./pages/About";
+import ContactPage from "./pages/Contact";
+import LandingPage from "./pages/Landing";
+import PortfolioPage from "./pages/Portfolio";
+import SkillsPage from "./pages/Skills";
 
-function App() {
-  return <div className="App">Ello </div>;
-}
+export interface IApplicationProps {}
 
-export default App;
+const Application: React.FunctionComponent<IApplicationProps> = (props) => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+        <Route path="/portfolio" element={<PortfolioPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+export default Application;
