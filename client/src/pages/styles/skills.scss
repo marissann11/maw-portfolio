@@ -18,7 +18,8 @@
   filter: brightness(70%);
 }
 .skillsimg:hover {
+  transform: translateY(-5%);
   filter: brightness(100%);
   filter: saturate(200%);
-  transform: rotate(10deg);
+  transform: rotateZ(10deg);
 }

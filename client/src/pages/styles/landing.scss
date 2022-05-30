@@ -2,14 +2,26 @@
 
 .landing {
   background-image: $landing-bg;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   text-align: center;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.text {
+  align-self: center;
+  height: auto;
+  width: 100%;
+  font-size: 35px;
 }
 .landingNav a {
   text-decoration: none;
 }
 .landingNav {
-  width: 50%;
+  width: 30%;
+  align-self: center;
+  padding: 50px;
 }
