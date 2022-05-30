@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { TextField, Button, Box } from "@mui/material";
+import "./styles/contact.scss";
 
 import NavComponent from "../components/Nav";
 
@@ -46,6 +47,7 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
     <div>
       <NavComponent />
       <Box
+        className="contactBox"
         component="form"
         sx={{
           "& .MuiTextField-root": { m: 1, width: "25ch" },
@@ -54,8 +56,9 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
         autoComplete="off"
         onSubmit={submitRequest}
       >
-        <div>
+        <div className="fields">
           <TextField
+            className="field"
             required
             id="outlined-required"
             label="Name"
@@ -63,6 +66,7 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
             value={name}
           />
           <TextField
+            className="field"
             required
             id="outlined-required"
             label="Email"
@@ -70,12 +74,14 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
             value={email}
           />
           <TextField
+            className="field"
             id="outlined"
             label="Phone"
             onChange={(e) => setPhone(e.target.value)}
             value={phone}
           />
           <TextField
+            className="field"
             id="outlined-multiline-static"
             label="Your Message"
             multiline
@@ -83,7 +89,7 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
             onChange={(e) => setMessage(e.target.value)}
             value={message}
           />
-          <Button variant="outlined" type="submit">
+          <Button variant="outlined" type="submit" className="btn" size="large">
             Submit
           </Button>
         </div>
