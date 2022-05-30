@@ -1,6 +1,5 @@
 import React from "react";
 import NavComponent from "../components/Nav";
-import HomeComponent from "../components/HomeLink";
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
 
@@ -65,7 +64,6 @@ const PortfolioPage: React.FunctionComponent<IPortfolioPageProps> = (props) => {
   return (
     <div>
       <NavComponent />
-      <HomeComponent />
       <Carousel>
         {projects.map((project, i) => (
           <Paper key={i}>

@@ -1,6 +1,5 @@
 import React from "react";
 import NavComponent from "../components/Nav";
-import HomeComponent from "../components/HomeLink";
 import me from "../assets/me.png";
 import { FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa";
 
@@ -10,7 +9,6 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
   return (
     <div>
       <NavComponent />
-      <HomeComponent />
       <h1>About Me</h1>
       <p>
         This is a paragraph of text about me.

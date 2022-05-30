@@ -3,7 +3,6 @@ import emailjs from "emailjs-com";
 import { TextField, Button, Box } from "@mui/material";
 
 import NavComponent from "../components/Nav";
-import HomeComponent from "../components/HomeLink";
 
 export interface IContactPageProps {}
 
@@ -46,7 +45,6 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
   return (
     <div>
       <NavComponent />
-      <HomeComponent />
       <Box
         component="form"
         sx={{

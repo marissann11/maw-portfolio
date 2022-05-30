@@ -1,5 +1,7 @@
+@import "../../config";
+
 .landing {
-  background-image: url("../../assets/background.png");
+  background-image: $landing-bg;
   background-size: contain;
   background-repeat: no-repeat;
   height: 100vh;
