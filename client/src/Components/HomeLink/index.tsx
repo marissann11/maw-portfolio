@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 export interface IHomeComponentProps {}
 
 const HomeComponent: React.FunctionComponent<IHomeComponentProps> = (props) => {
-  return <Link to="/">Home</Link>;
+  const homeButton = `< Home / >`;
+
+  return <Link to="/">{homeButton}</Link>;
 };
 
 export default HomeComponent;

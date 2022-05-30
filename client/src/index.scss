@@ -1,0 +1,13 @@
+@import "config";
+
+* {
+  margin: 0;
+  padding: 0;
+  color: $accent-light;
+}
+
+body {
+  height: 100%;
+  max-width: 100%;
+  text-decoration: none;
+}
