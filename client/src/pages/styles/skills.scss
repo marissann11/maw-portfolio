@@ -9,9 +9,16 @@
 .resume {
   width: 50%;
 }
-.icon img {
+.skillsimg {
   width: auto;
   max-width: 100px;
   height: auto;
   max-height: 100px;
+  padding: 5px;
+  filter: brightness(70%);
+}
+.skillsimg:hover {
+  filter: brightness(100%);
+  filter: saturate(200%);
+  transform: rotate(10deg);
 }

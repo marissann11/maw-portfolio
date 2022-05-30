@@ -133,27 +133,36 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
           {skills.map(
             (skill, i) =>
               skill.backend && (
-                <div key={i} className="icon">
-                  <img src={skill.src} alt={skill.name}></img>
-                </div>
+                <img
+                  src={skill.src}
+                  alt={skill.name}
+                  key={i}
+                  className="skillsimg"
+                ></img>
               )
           )}
           <h2>Databases</h2>
           {skills.map(
             (skill, i) =>
               skill.database && (
-                <div key={i} className="icon">
-                  <img src={skill.src} alt={skill.name}></img>
-                </div>
+                <img
+                  src={skill.src}
+                  alt={skill.name}
+                  key={i}
+                  className="skillsimg"
+                ></img>
               )
           )}
           <h2>Frontend Technologies</h2>
           {skills.map(
             (skill, i) =>
               skill.frontend && (
-                <div key={i} className="icon">
-                  <img src={skill.src} alt={skill.name}></img>
-                </div>
+                <img
+                  src={skill.src}
+                  alt={skill.name}
+                  key={i}
+                  className="skillsimg"
+                ></img>
               )
           )}
           <h2>Deployment & Version Control</h2>
