@@ -1,0 +1,19 @@
+.about {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.img {
+  align-self: center;
+}
+.aboutText {
+  align-self: center;
+}
+.icons {
+  font-size: 30px;
+  align-self: center;
+}
+.icon {
+  padding: 7px;
+}

@@ -1,0 +1,17 @@
+.skillsPage {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.skills {
+  width: 50%;
+}
+.resume {
+  width: 50%;
+}
+.icon img {
+  width: auto;
+  max-width: 100px;
+  height: auto;
+  max-height: 100px;
+}
