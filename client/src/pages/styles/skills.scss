@@ -1,13 +1,23 @@
 .skillsPage {
   display: flex;
-  text-align: center;
   flex-wrap: wrap;
+  height: 80vh;
+  text-align: center;
+  padding: 20px;
+  align-content: center;
+}
+h2 {
+  font-size: 30px;
+  padding: 10px;
 }
 .skills {
-  width: 50%;
+  width: 33%;
 }
 .resume {
-  width: 50%;
+  width: 33%;
+}
+.skillsText {
+  width: 33%;
 }
 .skillsimg {
   width: auto;
@@ -21,5 +31,20 @@
   transform: translateY(-5%);
   filter: brightness(100%);
   filter: saturate(200%);
-  transform: rotateZ(10deg);
+}
+.skillsText p {
+  font-size: 20px;
+}
+.resume img {
+  height: auto;
+  max-height: 500px;
+  width: auto;
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 3%;
+  opacity: 70%;
+}
+.resume img:hover {
+  opacity: 100%;
+  cursor: pointer;
 }

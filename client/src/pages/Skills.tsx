@@ -165,18 +165,20 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
                 ></img>
               )
           )}
-          <h2>Deployment & Version Control</h2>
-          <h4>Heroku, GitHub Pages, MongoDB Atlas, Git, BitBucket, GitHub</h4>
-          <h2>Additional Skills</h2>
-          <h4>
-            ESLint, Prettier, TDD, Jira, Data Visualization, Stripe API, Redux
-          </h4>
-          <h3>What I'm learning ... </h3>
-          <p>C#, .NET, AWS</p>{" "}
         </div>
         <div className="resume">
-          <h3>Download My Resume</h3>
+          <h2>Download My Resume</h2>
           <img src={resumeImg} alt="screenshot of resume"></img>
+        </div>
+        <div className="skillsText">
+          <h2>Deployment & Version Control</h2>
+          <p>Heroku, GitHub Pages, MongoDB Atlas, Git, BitBucket, GitHub</p>
+          <h2>Additional Skills</h2>
+          <p>
+            ESLint, Prettier, TDD, Jira, Data Visualization, Stripe API, Redux
+          </p>
+          <h2>In The Works ... </h2>
+          <p>C#, .NET, AWS</p>{" "}
         </div>
       </div>
     </>
