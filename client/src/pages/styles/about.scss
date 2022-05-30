@@ -1,19 +1,40 @@
+@import "../../config";
+
 .about {
   display: flex;
+  flex-wrap: wrap;
+  height: 80vh;
   justify-content: center;
   text-align: center;
-  flex-wrap: wrap;
 }
 .img {
   align-self: center;
+  padding: 15px;
+}
+.img img {
+  height: auto;
+  max-height: 550px;
+  width: auto;
+  max-width: 550px;
+  filter: saturate(111%);
 }
 .aboutText {
   align-self: center;
+  padding: 30px;
+}
+.aboutText h1 {
+  font-size: 40px;
+}
+.aboutText p {
+  font-size: 20px;
 }
 .icons {
   font-size: 30px;
-  align-self: center;
+  padding-top: 15px;
 }
 .icon {
-  padding: 7px;
+  padding: 10px;
+}
+.icon:hover {
+  transform: rotate(10deg);
 }
