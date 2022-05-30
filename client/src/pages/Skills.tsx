@@ -1,6 +1,9 @@
 import React from "react";
 import NavComponent from "../components/Nav";
 import resumeImg from "../assets/resumeImg.png";
+import { useSpring, animated } from "react-spring";
+import Tooltip from "@mui/material/Tooltip";
+
 import "./styles/skills.scss";
 import nodeImg from "../assets/backend/nodejs.png";
 import graphqlImg from "../assets/backend/graphql.png";
@@ -19,6 +22,12 @@ import mongoImg from "../assets/databases/mongo.png";
 export interface ISkillsPageProps {}
 
 const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
+  const mainSpring = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 800 },
+  });
+
   type Skill = {
     src: string;
     name: string;
@@ -32,7 +41,7 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
   skills = [
     {
       src: nodeImg,
-      name: "Node js",
+      name: "Node.js",
       backend: true,
       frontend: false,
       database: false,
@@ -46,7 +55,7 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
     },
     {
       src: expressImg,
-      name: "Express js",
+      name: "Express.js",
       backend: true,
       frontend: false,
       database: false,
@@ -61,21 +70,21 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
 
     {
       src: reactImg,
-      name: "React js",
+      name: "React.js",
       backend: false,
       frontend: true,
       database: false,
     },
     {
       src: jsImg,
-      name: "Javascript",
+      name: "JavaScript",
       backend: false,
       frontend: true,
       database: false,
     },
     {
       src: typeImg,
-      name: "Typescript",
+      name: "TypeScript",
       backend: false,
       frontend: true,
       database: false,
@@ -125,7 +134,7 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
   ];
 
   return (
-    <>
+    <animated.main style={mainSpring}>
       <NavComponent />
       <div className="skillsPage">
         <div className="skills">
@@ -133,36 +142,42 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
           {skills.map(
             (skill, i) =>
               skill.backend && (
-                <img
-                  src={skill.src}
-                  alt={skill.name}
-                  key={i}
-                  className="skillsimg"
-                ></img>
+                <Tooltip title={skill.name}>
+                  <img
+                    src={skill.src}
+                    alt={skill.name}
+                    key={i}
+                    className="skillsimg"
+                  ></img>
+                </Tooltip>
               )
           )}
           <h2>Databases</h2>
           {skills.map(
             (skill, i) =>
               skill.database && (
-                <img
-                  src={skill.src}
-                  alt={skill.name}
-                  key={i}
-                  className="skillsimg"
-                ></img>
+                <Tooltip title={skill.name}>
+                  <img
+                    src={skill.src}
+                    alt={skill.name}
+                    key={i}
+                    className="skillsimg"
+                  ></img>
+                </Tooltip>
               )
           )}
           <h2>Frontend Technologies</h2>
           {skills.map(
             (skill, i) =>
               skill.frontend && (
-                <img
-                  src={skill.src}
-                  alt={skill.name}
-                  key={i}
-                  className="skillsimg"
-                ></img>
+                <Tooltip title={skill.name}>
+                  <img
+                    src={skill.src}
+                    alt={skill.name}
+                    key={i}
+                    className="skillsimg"
+                  ></img>
+                </Tooltip>
               )
           )}
         </div>
@@ -181,7 +196,7 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
           <p>C#, .NET, AWS</p>{" "}
         </div>
       </div>
-    </>
+    </animated.main>
   );
 };
 

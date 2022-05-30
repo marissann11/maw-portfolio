@@ -1,11 +1,19 @@
 import React from "react";
 import NavComponent from "../components/Nav";
+import { useSpring, animated } from "react-spring";
+
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
 
 export interface IPortfolioPageProps {}
 
 const PortfolioPage: React.FunctionComponent<IPortfolioPageProps> = (props) => {
+  const mainSpring = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 1000 },
+  });
+
   type Project = {
     name: string;
     image: string;
@@ -62,19 +70,21 @@ const PortfolioPage: React.FunctionComponent<IPortfolioPageProps> = (props) => {
   ];
 
   return (
-    <div>
-      <NavComponent />
-      <Carousel>
-        {projects.map((project, i) => (
-          <Paper key={i}>
-            <p>{project.name}</p>
-            <p>{project.description}</p>
-            <Button>{project.github}</Button>
-            <Button>{project.site}</Button>
-          </Paper>
-        ))}
-      </Carousel>
-    </div>
+    <animated.main style={mainSpring}>
+      <div>
+        <NavComponent />
+        <Carousel>
+          {projects.map((project, i) => (
+            <Paper key={i}>
+              <p>{project.name}</p>
+              <p>{project.description}</p>
+              <Button>{project.github}</Button>
+              <Button>{project.site}</Button>
+            </Paper>
+          ))}
+        </Carousel>
+      </div>
+    </animated.main>
   );
 };
 
