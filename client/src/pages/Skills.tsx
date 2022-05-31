@@ -189,11 +189,13 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
         <div className="skillsText">
           <h2>Deployment & Version Control</h2>
           <p>Heroku, GitHub Pages, MongoDB Atlas, Git, BitBucket, GitHub</p>
+          <br />
           <h2>Additional Skills</h2>
           <p>
             ESLint, Prettier, TDD, Jira, Data Visualization, Stripe API, Redux
           </p>
-          <h2>My Current & Ongoing Courses </h2>
+          <br />
+          <h2>Currently Exploring</h2>
           <p>C#, .NET, AWS</p>{" "}
         </div>
       </div>
