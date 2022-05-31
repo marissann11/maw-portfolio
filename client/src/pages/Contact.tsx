@@ -1,18 +1,30 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { useSpring, animated } from "react-spring";
+import { useSnackbar, VariantType } from "notistack";
 
 import { TextField, Button, Box, Stack, styled } from "@mui/material";
 import "./styles/contact.scss";
 
 import NavComponent from "../components/Nav";
 import HomeComponent from "../components/HomeLink";
-import ConfirmAlertComponent from "../components/ConfirmAlert";
-import ErrorAlertComponent from "../components/ErrorAlert";
 
 export interface IContactPageProps {}
 
 const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
+  const { enqueueSnackbar } = useSnackbar();
+
+  let successSnackbar: (variant: VariantType) => void;
+  let errorSnackbar: (variant: VariantType) => void;
+
+  successSnackbar = (variant: VariantType) => () => {
+    enqueueSnackbar("Your email has been sent!", { variant });
+  };
+
+  errorSnackbar = (variant: VariantType) => () => {
+    enqueueSnackbar("Your email failed to send", { variant });
+  };
+
   const CustomButton = styled(Button)({
     color: "#e9ab6d",
     border: "solid #e9ab6d 1px",
@@ -48,21 +60,21 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
         },
         PUBLIC_KEY
       );
+      successSnackbar("success");
       setPhone("");
       setName("");
       setEmail("");
       setMessage("");
-      return <ConfirmAlertComponent />;
     } catch (err) {
       console.log(err);
-      return <ErrorAlertComponent />;
+      errorSnackbar("error");
     }
   };
 
   return (
     <animated.main style={mainSpring}>
-      <div>
-        <NavComponent />
+      <NavComponent />
+      <div className="contact">
         <Box
           className="contactBox"
           component="form"
@@ -111,7 +123,16 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
             </CustomButton>
           </Stack>
         </Box>
+        <div className="contactText">
+          <h1>Let's Talk!</h1>
+          <p>
+            Whether you'd like to work together, <br />
+            like for me to work for you, or just want to chat, <br />
+            shoot me a message!
+          </p>
+        </div>
       </div>
+
       <HomeComponent />
     </animated.main>
   );
