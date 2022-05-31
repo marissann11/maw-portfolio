@@ -3,6 +3,7 @@ import NavComponent from "../components/Nav";
 import resumeImg from "../assets/resumeImg.png";
 import { useSpring, animated } from "react-spring";
 import Tooltip from "@mui/material/Tooltip";
+import HomeComponent from "../components/HomeLink";
 
 import "./styles/skills.scss";
 import nodeImg from "../assets/backend/nodejs.png";
@@ -196,6 +197,7 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
           <p>C#, .NET, AWS</p>{" "}
         </div>
       </div>
+      <HomeComponent />
     </animated.main>
   );
 };

@@ -4,6 +4,7 @@ import { useSpring, animated } from "react-spring";
 
 import Carousel from "react-material-ui-carousel";
 import { Paper, Button } from "@mui/material";
+import HomeComponent from "../components/HomeLink";
 
 export interface IPortfolioPageProps {}
 
@@ -84,6 +85,7 @@ const PortfolioPage: React.FunctionComponent<IPortfolioPageProps> = (props) => {
           ))}
         </Carousel>
       </div>
+      <HomeComponent />
     </animated.main>
   );
 };

@@ -1,0 +1,13 @@
+@import "../../config";
+
+.homenav {
+  background-color: $bg-second;
+}
+a {
+  font-size: 35px;
+  text-decoration: none;
+  opacity: 80%;
+}
+a:hover {
+  opacity: 100%;
+}

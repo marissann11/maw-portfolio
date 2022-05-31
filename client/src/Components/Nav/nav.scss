@@ -1,7 +1,16 @@
 .nav {
-  background-image: url(../../assets/background.png);
+  background-image: url(../../assets/navbackground.png);
   background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
 }
 .nav a {
   text-decoration: none;
+  padding: 50px;
+  font-size: 20px;
+  opacity: 80%;
+}
+.nav a:hover {
+  filter: saturate(111%);
+  opacity: 100%;
 }

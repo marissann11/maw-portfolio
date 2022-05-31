@@ -6,6 +6,7 @@ import { TextField, Button, Box } from "@mui/material";
 import "./styles/contact.scss";
 
 import NavComponent from "../components/Nav";
+import HomeComponent from "../components/HomeLink";
 
 export interface IContactPageProps {}
 
@@ -109,6 +110,7 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
           </div>
         </Box>
       </div>
+      <HomeComponent />
     </animated.main>
   );
 };

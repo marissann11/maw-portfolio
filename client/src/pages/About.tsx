@@ -2,6 +2,7 @@ import React from "react";
 import NavComponent from "../components/Nav";
 import me from "../assets/me.png";
 import "./styles/about.scss";
+import HomeComponent from "../components/HomeLink";
 import { FaLinkedin, FaGithub, FaStackOverflow } from "react-icons/fa";
 import { useSpring, animated } from "react-spring";
 
@@ -59,6 +60,7 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
           </div>
         </div>
       </div>
+      <HomeComponent />
     </animated.main>
   );
 };
