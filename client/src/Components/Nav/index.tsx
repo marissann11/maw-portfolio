@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./nav.scss";
-import HomeLink from "../HomeLink";
 
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
