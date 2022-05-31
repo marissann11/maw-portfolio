@@ -88,31 +88,35 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
             <TextField
               className="field"
               required
-              id="outlined-required"
+              id="filled-required"
               label="Name"
+              variant="filled"
               onChange={(e) => setName(e.target.value)}
               value={name}
             />
             <TextField
               className="field"
               required
-              id="outlined-required"
+              id="filled-required"
               label="Email"
+              variant="filled"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
             <TextField
               className="field"
-              id="outlined"
+              id="filled"
               label="Phone"
+              variant="filled"
               onChange={(e) => setPhone(e.target.value)}
               value={phone}
             />
             <TextField
               className="field"
               required
-              id="outlined-multiline-static"
+              id="filled-multiline-static"
               label="Your Message"
+              variant="filled"
               multiline
               rows={4}
               onChange={(e) => setMessage(e.target.value)}
