@@ -193,7 +193,7 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
           <p>
             ESLint, Prettier, TDD, Jira, Data Visualization, Stripe API, Redux
           </p>
-          <h2>In The Works ... </h2>
+          <h2>My Current & Ongoing Courses </h2>
           <p>C#, .NET, AWS</p>{" "}
         </div>
       </div>

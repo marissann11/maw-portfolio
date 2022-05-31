@@ -16,22 +16,22 @@ const LandingNavComponent: React.FunctionComponent<
       <AppBar position="static" color="transparent">
         <Toolbar>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            const navigation
+            <p> const navigation </p>
           </Typography>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             ={" "}
           </Typography>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/about">[ "About" ,</Link>
+            <Link to="/about">[ 'About' ,</Link>
           </Typography>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/skills">"Skills" ,</Link>
+            <Link to="/skills">'Skills' ,</Link>
           </Typography>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/portfolio">"Portfolio" ,</Link>
+            <Link to="/portfolio">'Portfolio' ,</Link>
           </Typography>
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
-            <Link to="/contact">"Contact" ]</Link>
+            <Link to="/contact">'Contact' ]</Link>
           </Typography>
         </Toolbar>
       </AppBar>

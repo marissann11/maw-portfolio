@@ -2,15 +2,23 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { useSpring, animated } from "react-spring";
 
-import { TextField, Button, Box } from "@mui/material";
+import { TextField, Button, Box, Stack, styled } from "@mui/material";
 import "./styles/contact.scss";
 
 import NavComponent from "../components/Nav";
 import HomeComponent from "../components/HomeLink";
+import ConfirmAlertComponent from "../components/ConfirmAlert";
+import ErrorAlertComponent from "../components/ErrorAlert";
 
 export interface IContactPageProps {}
 
 const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
+  const CustomButton = styled(Button)({
+    color: "#e9ab6d",
+    border: "solid #e9ab6d 1px",
+    marginTop: 10,
+  }) as typeof Button;
+
   const mainSpring = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
@@ -40,15 +48,14 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
         },
         PUBLIC_KEY
       );
-      console.log(res);
-      alert("sent");
       setPhone("");
       setName("");
       setEmail("");
       setMessage("");
+      return <ConfirmAlertComponent />;
     } catch (err) {
       console.log(err);
-      alert("No");
+      return <ErrorAlertComponent />;
     }
   };
 
@@ -60,13 +67,12 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
           className="contactBox"
           component="form"
           sx={{
-            "& .MuiTextField-root": { m: 1, width: "25ch" },
+            "& .MuiTextField-root": { m: 1, width: "55ch" },
           }}
-          noValidate
           autoComplete="off"
           onSubmit={submitRequest}
         >
-          <div className="fields">
+          <Stack className="fields">
             <TextField
               className="field"
               required
@@ -92,6 +98,7 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
             />
             <TextField
               className="field"
+              required
               id="outlined-multiline-static"
               label="Your Message"
               multiline
@@ -99,15 +106,10 @@ const ContactPage: React.FunctionComponent<IContactPageProps> = (props) => {
               onChange={(e) => setMessage(e.target.value)}
               value={message}
             />
-            <Button
-              variant="outlined"
-              type="submit"
-              className="btn"
-              size="large"
-            >
+            <CustomButton type="submit" size="large">
               Submit
-            </Button>
-          </div>
+            </CustomButton>
+          </Stack>
         </Box>
       </div>
       <HomeComponent />
