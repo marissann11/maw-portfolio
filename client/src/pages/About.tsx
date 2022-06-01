@@ -23,10 +23,16 @@ const AboutPage: React.FunctionComponent<IAboutPageProps> = (props) => {
           <div className="aboutText">
             <h1>Hi, I'm Marissa!</h1>
             <p>
-              This is a paragraph of text about me.
-              <br />
-              It will probably say things that I enjoy doing <br />
-              Or things about my experience I don't know
+              I have a passion for back end development and never shy away from
+              a <br />
+              challenge. I believe that my work ethic alone can fill any <br />
+              possible gaps in skill, and I can be a valuable asset to your
+              team. <br /> <br /> I have created this portfolio in order to
+              introduce myself to TypeScript and to improve upon <br /> where I
+              feel I am weakest - CSS and frontend development as a whole.
+              <br /> <br />
+              Please feel free to visit my profiles below or reach out via my
+              contact form. <br />
             </p>
             <div className="icons">
               <a

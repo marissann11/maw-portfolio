@@ -192,7 +192,8 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
           <br />
           <h2>Additional Skills</h2>
           <p>
-            ESLint, Prettier, TDD, Jira, Data Visualization, Stripe API, Redux
+            ESLint, Prettier, TDD, Jira, Data Visualization, Stripe API, Redux,
+            CSS Frameworks, User Auth, Session Storage
           </p>
           <br />
           <h2>Currently Exploring</h2>
