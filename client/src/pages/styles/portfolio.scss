@@ -1,0 +1,49 @@
+.port {
+  max-height: 85vh;
+  position: relative;
+}
+.sole1 {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  top: 160px;
+  left: 255px;
+  cursor: pointer;
+}
+.sole2 {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  cursor: pointer;
+  top: 110px;
+  left: 700px;
+}
+.weather {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  cursor: pointer;
+  top: 110px;
+  right: 345px;
+}
+.work {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  cursor: pointer;
+  bottom: 80px;
+  left: 350px;
+}
+.quiz {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  cursor: pointer;
+  bottom: 130px;
+  right: 245px;
+}
