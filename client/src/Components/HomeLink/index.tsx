@@ -14,7 +14,7 @@ const HomeComponent: React.FunctionComponent<IHomeComponentProps> = (props) => {
   const homeButton = `< Home / >`;
 
   return (
-    <CustomNav>
+    <CustomNav className="homeBtn">
       <Link to="/">{homeButton}</Link>
     </CustomNav>
   );

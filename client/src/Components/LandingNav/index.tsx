@@ -12,9 +12,9 @@ const LandingNavComponent: React.FunctionComponent<
   ILandingNavComponentProps
 > = (props) => {
   return (
-    <Box sx={{ flexGrow: 0.5 }} className="landingNav">
+    <Box sx={{ flexGrow: 0.5 }} className="navContainer">
       <AppBar position="static" color="transparent">
-        <Toolbar>
+        <Toolbar className="landingNav">
           <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
             <p> const navigation </p>
           </Typography>

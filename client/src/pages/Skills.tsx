@@ -4,6 +4,7 @@ import resumeImg from "../assets/resumeImg.png";
 import { useSpring, animated } from "react-spring";
 import Tooltip from "@mui/material/Tooltip";
 import HomeComponent from "../components/HomeLink";
+// import Resume from "../assets/Resume.docx";
 
 import "./styles/skills.scss";
 import nodeImg from "../assets/backend/nodejs.png";
@@ -184,7 +185,9 @@ const SkillsPage: React.FunctionComponent<ISkillsPageProps> = (props) => {
         </div>
         <div className="resume">
           <h2>Download My Resume</h2>
+          {/* <a href={Resume}> */}
           <img src={resumeImg} alt="screenshot of resume"></img>
+          {/* </a> */}
         </div>
         <div className="skillsText">
           <h2>Deployment & Version Control</h2>

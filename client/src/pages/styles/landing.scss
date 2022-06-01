@@ -17,14 +17,39 @@
   width: 100%;
   font-size: 35px;
 }
+.navContainer {
+  max-width: 70vw;
+  align-self: center;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
 .landingNav a {
   text-decoration: none;
 }
-.landingNav {
-  width: 30%;
-  align-self: center;
-  padding: 50px;
-}
 .landingNav p {
   font-size: 35px;
+}
+
+@media all and (max-width: 1350px) {
+  .navContainer {
+    width: 100%;
+  }
+  .landingNav {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media all and (max-width: 1200px) {
+  .landing {
+    background-image: $smlanding-bg;
+  }
+}
+@media all and (max-width: 600px) {
+  .text {
+    font-size: 25px;
+  }
+  .text h2 {
+    font-size: 23px;
+  }
 }

@@ -21,6 +21,7 @@
 .aboutText {
   align-self: center;
   padding: 30px;
+  flex-direction: column;
 }
 .aboutText h1 {
   font-size: 50px;
@@ -37,4 +38,22 @@
 }
 .icon:hover {
   transform: rotate(10deg);
+}
+
+@media all and (max-width: 350px) {
+  .img img {
+    max-height: 300px;
+    max-width: 300px;
+  }
+}
+@media all and (max-width: 750px) {
+  .img img {
+    max-height: 500px;
+    max-width: 500px;
+  }
+}
+@media all and (max-width: 1200px) {
+  .aboutText {
+    width: 100vw;
+  }
 }
