@@ -1,8 +1,15 @@
 import React from "react";
 import { ImageMap } from "@qiuz/react-image-map";
 import { AreaType } from "./AreaType";
+import img0 from "../assets/projects/0.png";
+import img1 from "../assets/projects/1.png";
+import img2 from "../assets/projects/2.png";
+import img3 from "../assets/projects/3.png";
+import img4 from "../assets/projects/4.png";
 import portfolioImg from "../assets/portfolio.png";
 import { Box, Typography, Modal } from "@mui/material";
+
+import "../pages/styles/portfolio.scss";
 
 export interface IImageMapComponentProps {}
 
@@ -11,10 +18,11 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 500,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 25,
+  width: 600,
+  bgcolor: "#020204",
+  border: "2px solid #8c441f",
+  boxShadow: 50,
+  borderRadius: 2,
   p: 5,
 };
 
@@ -64,37 +72,39 @@ let projects: Project[];
 projects = [
   {
     name: "Sole Intentions",
-    image: "sole-intentions.png",
-    description: "SQL, Handlebars, etc",
+    image: img0,
+    description:
+      "Technologies: Node.js, Express.js, Bootstrap, MySQL2, Sequelize, Handlebars, Stripe API, Express-session",
     github: "https://github.com/marissann11/sole-intentions-TMT",
     site: "https://soleintentions.herokuapp.com/",
   },
   {
     name: "Sole Intentions v2",
-    image: "sole-intentions2.png",
-    description: "Mongoose, React.js, etc",
+    image: img1,
+    description:
+      "Technologies: MongoDB, React.js, Semantic UI, GraphQl, Chart.js, Cloudinary, Apollo Client and Server Express",
     github: "https://github.com/marissann11/sole-REACTions",
     site: "https://sole-intentions.herokuapp.com/",
   },
 
   {
     name: "Weather Dashboard",
-    image: "weather.png",
-    description: "technologies, etc",
+    image: img2,
+    description: "Technologies: JavaScript, CSS, HTML",
     github: "https://github.com/marissann11/weather-dashboard-week6",
     site: "https://marissann11.github.io/weather-dashboard-week6/",
   },
   {
     name: "Work Day Scheduler",
-    image: "workday.png",
-    description: "technologies, etc",
+    image: img3,
+    description: "Technologies: JavaScript, CSS, HTML",
     github: "https://github.com/marissann11/work-day-scheduler-week5",
     site: "https://marissann11.github.io/work-day-scheduler-week5/",
   },
   {
     name: "Code Quiz",
-    image: "quiz.png",
-    description: "technologies, etc",
+    image: img4,
+    description: "Technologies: JavaScript, CSS, HTML",
     github: "https://github.com/marissann11/code-quiz-week4-challenge",
     site: "https://marissann11.github.io/code-quiz-week4-challenge/",
   },
@@ -138,19 +148,23 @@ const ImageMapComponent: React.FunctionComponent<IImageMapComponentProps> = (
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        className="modal"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
+          <Typography id="modal-modal-title" variant="h4" component="h2">
             {currentProject.name}
           </Typography>
+          <img src={currentProject.image} alt={currentProject.name}></img>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
             {currentProject.description}
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {currentProject.github}
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            {currentProject.site}
+            <a href={currentProject.github} target="_blank" rel="noreferrer">
+              View Repo{" "}
+            </a>
+            <a href={currentProject.site} target="_blank" rel="noreferrer">
+              View Site
+            </a>
           </Typography>
         </Box>
       </Modal>
