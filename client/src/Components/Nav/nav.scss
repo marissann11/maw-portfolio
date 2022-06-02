@@ -14,3 +14,16 @@
   filter: saturate(131%);
   opacity: 100%;
 }
+
+@media all and (max-width: 850px) {
+  .nav {
+    width: 100%;
+  }
+  .navBar {
+    flex-direction: column;
+    width: 100%;
+  }
+  .nav a {
+    flex-direction: column;
+  }
+}

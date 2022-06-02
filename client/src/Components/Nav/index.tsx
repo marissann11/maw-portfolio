@@ -12,7 +12,7 @@ export interface INavComponentProps {}
 const NavComponent: React.FunctionComponent<INavComponentProps> = (props) => {
   return (
     <Box sx={{ flexGrow: 1 }} className="nav">
-      <AppBar position="static" color="transparent">
+      <AppBar position="static" color="transparent" className="navBar">
         <Toolbar>
           <Typography variant="h6" component="div">
             <Link to="/about">[ 'About' ,</Link>

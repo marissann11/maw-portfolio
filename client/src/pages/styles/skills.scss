@@ -50,3 +50,18 @@ h2 {
   opacity: 100%;
   cursor: pointer;
 }
+
+@media all and (max-width: 1000px) {
+  .skillsPage {
+    flex-direction: column;
+  }
+  .skills {
+    width: 100vw;
+  }
+  .resume {
+    width: 100vw;
+  }
+  .skillsText {
+    width: 100vw;
+  }
+}
